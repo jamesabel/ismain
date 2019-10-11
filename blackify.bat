@@ -1,1 +1,1 @@
-venv\Scripts\black.exe -n 132 ismain test_is_main example
+venv\Scripts\black.exe -l 132 ismain test_is_main example

@@ -1,4 +1,3 @@
-
 import subprocess
 import os
 import sys
@@ -11,7 +10,7 @@ def test_is_main():
     # not as "main"
     is_main_return = is_main()
     print(f"is_main_return={is_main_return}")
-    assert (not is_main_return)
+    assert not is_main_return
 
     # run this script as "main"
     cmd = [os.path.join("venv", "Scripts", "python.exe"), os.path.join("test_is_main", "test_is_main.py")]

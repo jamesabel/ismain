@@ -4,3 +4,4 @@ pytest-cov
 black
 twine
 sphinx
+wheel

@@ -1,7 +1,7 @@
 Sundry
 ======
 
-Miscellaneous Code
+A prettier way to test for `main`.
 
 is_main()
 ---------

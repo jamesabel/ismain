@@ -1,7 +1,7 @@
 import inspect
 
 
-def is_main():
+def is_main() -> bool:
     """
 
     Prettier version of __name__ == "__main__"

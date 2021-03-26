@@ -1,3 +1,5 @@
+pushd .
+cd ..
 del /Q ismain.egg-info\*.*
 del /Q build\*.*
 del /Q dist\*.*
@@ -8,3 +10,4 @@ call venv\Scripts\activate.bat
 python.exe setup.py bdist_wheel
 twine upload dist/*
 deactivate
+popd

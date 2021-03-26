@@ -5,3 +5,5 @@ black
 twine
 sphinx
 wheel
+flake8
+mypy

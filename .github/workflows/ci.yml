@@ -5,6 +5,16 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch: # manual trigger, with an input
+    inputs:
+      env:
+        description: 'Environment'
+        required: false
+        default: test
+  schedule: # scheduled run (UTC)
+    - cron: '0 2 * * *'               # daily at 02:00 UTC
+  repository_dispatch: # trigger via API from external system
+    types: [ run-ci ]
 
 jobs:
   lint-and-test:

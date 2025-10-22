@@ -5,10 +5,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ismain"
-version = "0.0.4"
+version = "0.0.5"
 description = "ismain project"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.8"
 authors = [{ name = "James Abel" }]
 license = { text = "MIT" }
 dependencies = []

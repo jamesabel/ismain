@@ -1,4 +1,4 @@
 pushd .
 cd ..
-venv\Scripts\black.exe -l 132 ismain test_is_main example setup.py
+venv\Scripts\black.exe -l 132 ismain test_is_main example setup.py source
 popd

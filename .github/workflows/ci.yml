@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch: # manual trigger, with an input
+    inputs:
+      env:
+        description: 'Environment'
+        required: false
+        default: test
+  schedule: # scheduled run (UTC)
+    - cron: '0 2 * * *'               # daily at 02:00 UTC
+  repository_dispatch: # trigger via API from external system
+    types: [ run-ci ]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.10, 3.11, 3.12, 3.13, 3.14]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('**/requirements.txt', '**/pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-${{ matrix.python-version }}-
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          check-latest: true
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt || true
+          pip install --upgrade pytest flake8 mypy
+
+      - name: Run flake8
+        run: |
+          flake8 .
+
+      - name: Run mypy
+        run: |
+          mypy .
+
+      - name: Run tests
+        run: |
+          pytest -q --maxfail=1

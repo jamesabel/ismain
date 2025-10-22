@@ -1,0 +1,40 @@
+# toml
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ismain"
+version = "0.0.4"
+description = "ismain project"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "James Abel" }]
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "flake8>=6.0",
+  "mypy>=1.0"
+]
+
+[tool.setuptools.packages.find]
+include = ["ismain*"]
+
+[tool.flake8]
+max-line-length = 132
+extend-ignore = ["E203", "W503"]
+exclude = ["build", "dist", ".venv", "__pycache__", ".git", ".gitignore"]
+
+[tool.mypy]
+python_version = "3.14"
+ignore_missing_imports = true
+strict = false
+files = ["ismain", "test_is_main"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-q --maxfail=1"
+testpaths = ["test_is_main", "tests"]

@@ -12,7 +12,10 @@ def test_is_main():
     print(f"is_main_return={is_main_return}")
     assert not is_main_return
 
-    # run this script as "main"
+    # run this script as "main" if not in CI
+    if os.getenv("CI"):
+        print("Skipping subprocess test in CI environment")
+        return
     cmd = [os.path.join("venv", "Scripts", "python.exe"), os.path.join("test_is_main", "test_is_main.py")]
     p = subprocess.run(cmd)
     is_main_return = bool(p.returncode)

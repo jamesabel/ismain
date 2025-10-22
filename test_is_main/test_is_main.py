@@ -2,7 +2,7 @@ import subprocess
 import os
 import sys
 
-from ismain import is_main
+from ismain import is_main, __version__, __author__
 
 
 def test_is_main():
@@ -11,6 +11,9 @@ def test_is_main():
     is_main_return = is_main()
     print(f"is_main_return={is_main_return}")
     assert not is_main_return
+
+    assert __version__ is not None
+    assert __author__ is not None
 
     # run this script as "main" if not in CI
     if os.getenv("CI"):

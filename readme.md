@@ -1,3 +1,9 @@
+[![PyPI version](https://img.shields.io/pypi/v/PACKAGE.svg)](https://pypi.org/project/PACKAGE/)  <!-- PyPI current version -->
+[![PyPI downloads](https://img.shields.io/pypi/dm/PACKAGE)](https://pypi.org/project/PACKAGE/)  <!-- PyPI monthly downloads -->
+[![Codecov](https://codecov.io/gh/OWNER/REPO/branch/BRANCH/graph/badge.svg)](https://codecov.io/gh/OWNER/REPO)  <!-- Codecov coverage badge -->
+[![License](https://img.shields.io/github/license/OWNER/REPO)](https://github.com/OWNER/REPO/blob/BRANCH/LICENSE)  <!-- License -->
+[![Dependabot status](https://img.shields.io/badge/dependabot-up%20to%20date-brightgreen)](https://github.com/OWNER/REPO/security/dependabot)  <!-- Dependabot indicator (manual badge) -->
+[![Downloads (GitHub Releases)](https://img.shields.io/github/downloads/OWNER/REPO/total)](https://github.com/OWNER/REPO/releases)  <!-- Release downloads -->
 
 # Installation
 

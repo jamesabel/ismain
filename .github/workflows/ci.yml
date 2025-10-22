@@ -51,5 +51,6 @@ jobs:
         uses: codecov/codecov-action@v4
         with:
           files: coverage.xml
+          verbose: true
           # token is optional for public repos; set CODECOV_TOKEN in Secrets for private repos
           # token: ${{ secrets.CODECOV_TOKEN }}

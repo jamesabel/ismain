@@ -1,28 +1,20 @@
-import os
-
 from setuptools import setup
+from pathlib import Path
+import re
 
-from ismain.__version__ import __version__, __title__, __author__, __author_email__, __url__, __download_url__, __description__
+def read_version():
+    p = Path(__file__).parent / "ismain" / "__init__.py"
+    text = p.read_text(encoding="utf-8")
+    m = re.search(r"^__version__\s*=\s*['\"]([^'\"]+)['\"]", text, re.M)
+    return m.group(1) if m else "0.0.0"
 
-readme_file_path = os.path.join(__title__, 'readme.rst')
-
-with open(readme_file_path, encoding='utf-8') as f:
-    long_description = '\n' + f.read()
+def read_readme():
+    p = Path(__file__).parent / "README.md"
+    return p.read_text(encoding="utf-8") if p.exists() else ""
 
 setup(
-    name=__title__,
-    description=__description__,
-    long_description=long_description,
-    long_description_content_type='text/x-rst',
-    version=__version__,
-    author=__author__,
-    author_email=__author_email__,
-    license='MIT License',
-    url=__url__,
-    download_url=__download_url__,
-    keywords=['utility'],
-    packages=[__title__],
-    package_data={__title__: [readme_file_path, "py.typed"]},
-    install_requires=[],
-    classifiers=[]
+    name="ismain",
+    version=read_version(),
+    long_description=read_readme(),
+    long_description_content_type="text/markdown",
 )

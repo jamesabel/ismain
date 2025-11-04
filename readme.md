@@ -24,3 +24,11 @@ from ismain import is_main
 if is_main():
     print("Hello from main.")
 ```
+
+# Overhead
+
+The `ismain` function introduces some overhead compared to the native Python `if __name__ == "__main__":` construct.
+However, the absolute overhead is on the order of 10s of milliseconds on modern hardware, so it's generally negligible 
+for many applications.
+
+See the [benchmark results](benchmark/benchmark_results.md) for more details.

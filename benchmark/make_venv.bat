@@ -1,0 +1,3 @@
+"\Program Files\Python314\python.exe" -m venv --clear venv
+venv\Scripts\python.exe -m pip install --upgrade pip
+venv\Scripts\pip3 install -U -e ..

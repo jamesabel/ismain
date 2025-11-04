@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12", "3.13", "3.14"]
+        python-version: [ "3.8", "3.9", "3.10", "3.11", "3.12", "3.13", "3.14" ]
     steps:
       - uses: actions/checkout@v4
 
@@ -54,8 +54,3 @@ jobs:
           verbose: true
           # token is optional for public repos; set CODECOV_TOKEN in Secrets for private repos
           token: ${{ secrets.CODECOV_TOKEN }}
-
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v5
-        with:
-            token: ${{ secrets.CODECOV_TOKEN }}

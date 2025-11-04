@@ -1,6 +1,6 @@
 import time
 
-start = time.perf_counter()
+start = time.perf_counter()  # noqa: E402
 
 from ismain import is_main
 

@@ -38,7 +38,7 @@ jobs:
           pip install --upgrade pytest pytest-cov flake8 mypy
 
       - name: Run flake8
-        run: flake8 . --max-line-length=127
+        run: flake8 . --max-line-length=127 --per-file-ignores="benchmark/*.py:E402"
 
       - name: Run mypy
         run: mypy .

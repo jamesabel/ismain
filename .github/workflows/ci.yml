@@ -54,3 +54,8 @@ jobs:
           verbose: true
           # token is optional for public repos; set CODECOV_TOKEN in Secrets for private repos
           token: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+            token: ${{ secrets.CODECOV_TOKEN }}

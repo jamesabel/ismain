@@ -25,7 +25,7 @@ pytest -q --cov=ismain --cov-report=term-missing   # tests with coverage
 black -l 132 ismain test_is_main example setup.py source   # format
 ```
 
-`scripts/` holds Windows convenience wrappers (`coverage.bat`, `run_flake8.bat`, `run_mypy.bat`, `blackify.bat`). Publishing to PyPI is done by `.github/workflows/publish.yml` (GitHub release or manual run), which uploads with Provenance; never upload from a workstation.. `scripts/run-ci-local.ps1` replays the CI matrix locally across Python versions.
+`scripts/` holds Windows convenience wrappers (`coverage.bat`, `run_flake8.bat`, `run_mypy.bat`, `blackify.bat`). Publishing to PyPI is done by `.github/workflows/publish.yml` (GitHub release or manual run), which uploads with Provenance; never upload from a workstation. `scripts/run-ci-local.ps1` replays the CI matrix locally across Python versions.
 
 ## Testing notes
 

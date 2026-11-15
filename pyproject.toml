@@ -8,7 +8,7 @@ name = "ismain"
 dynamic = ["version"]
 description = "ismain project"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 authors = [{ name = "James Abel" }]
 license = { text = "MIT" }
 dependencies = []

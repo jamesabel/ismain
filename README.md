@@ -2,7 +2,7 @@
 [![PyPI downloads](https://img.shields.io/pypi/dm/ismain)](https://pypi.org/project/ismain/)
 [![codecov](https://codecov.io/github/jamesabel/ismain/graph/badge.svg?token=TWQPSUEX5S)](https://codecov.io/github/jamesabel/ismain)
 [![License](https://img.shields.io/github/license/jamesabel/ismain)](https://github.com/OWNER/REPO/blob/master/LICENSE)
-[![Supported Python versions](https://img.shields.io/badge/python-%3E%3D3.8-blue)](https://www.python.org/)
+[![Supported Python versions](https://img.shields.io/badge/python-%3E%3D3.10-blue)](https://www.python.org/)
 [![Dependabot status](https://img.shields.io/badge/dependabot-up%20to%20date-brightgreen)](https://github.com/jamesabel/ismain/security/dependabot)
 
 # Installation

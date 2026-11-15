@@ -33,7 +33,7 @@ black -l 132 ismain test_is_main example setup.py source   # format
 
 ## CI
 
-Two GitHub Actions workflows (`ci.yml`, `python-package.yml`) run flake8 + mypy + pytest on the Python 3.8–3.14 matrix on every push/PR to `master`. Coverage uploads to Codecov. flake8 uses `--max-line-length=127` in CI even though `pyproject.toml` sets `max-line-length = 132` for local runs.
+Two GitHub Actions workflows (`ci.yml`, `python-package.yml`) run flake8 + mypy + pytest on the Python 3.10–3.15 matrix (3.10 is the minimum supported version) on every push/PR to `master`. Coverage uploads to Codecov. flake8 uses `--max-line-length=127` in CI even though `pyproject.toml` sets `max-line-length = 132` for local runs.
 
 ## Benchmarks
 
